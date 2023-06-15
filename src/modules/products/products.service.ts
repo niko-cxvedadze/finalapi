@@ -1,12 +1,12 @@
 import { db } from "@src/utils/db";
 
-import { Prisma, TCategory_Enum } from "@prisma/client";
+import { Prisma } from "@prisma/client";
 
 export async function getProducts(args: {
   skip?: string;
   take?: string;
   search?: string;
-  category?: TCategory_Enum;
+  category?: string;
 }) {
   const { skip, take, search, category } = args;
 

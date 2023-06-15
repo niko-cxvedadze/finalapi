@@ -1,9 +1,8 @@
-import { TUser_Role_Enum } from "@prisma/client";
 import { Request, Response, NextFunction } from "express";
 
 export function isAdmin(req: Request, res: Response, next: NextFunction) {
   switch (req.user?.role) {
-    case TUser_Role_Enum.ADMIN: {
+    case "ADMIN": {
       next();
       break;
     }
